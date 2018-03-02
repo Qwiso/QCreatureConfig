@@ -29,7 +29,7 @@ namespace QCreatureConfig.Patches
             }
             
             // reconfigamajig the thing
-            __instance.transform.localScale = Vector3.one * configCreature.scale;
+            __instance.transform.localScale = Vector3.one * configCreature.size;
             __instance.liveMixin.data.maxHealth = defaultCreature.health * configCreature.health;
         }
     }

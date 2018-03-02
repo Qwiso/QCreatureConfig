@@ -1,13 +1,12 @@
 ﻿using Harmony;
-using UnityEngine;
 
 namespace QCreatureConfig.Patches
 {
-    [HarmonyPatch(typeof(MeleeAttack))]
+    [HarmonyPatch(typeof(CrabsnakeMeleeAttack))]
     [HarmonyPatch("OnTouch")]
-    class MeleeAttack_OnTouch_Patch
+    class CrabSnake_OnTouch_Patch
     {
-        public static void Prefix(MeleeAttack __instance, Collider collider)
+        public static void Prefix(CrabsnakeMeleeAttack __instance)
         {
             QCreatures.lastTouched = __instance.gameObject.GetComponent<Creature>();
         }

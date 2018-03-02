@@ -7,7 +7,7 @@ namespace QCreatureConfig.Patches
     [HarmonyPatch("CalculateDamage")]
     class DamageSystem_CalculateDamage_Patch
     {
-        public static void Postfix(float __result, GameObject dealer)
+        public static void Postfix(ref float __result, GameObject target, GameObject dealer)
         {
             Creature component = null;
 
@@ -32,6 +32,7 @@ namespace QCreatureConfig.Patches
             if (creature != null)
             {
                 __result = __result * creature.damage;
+                System.Console.WriteLine("[QCreatureConfig] {0} did {1} damage to {2}", type, __result, target);
             }
         }
     }

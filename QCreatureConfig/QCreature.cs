@@ -5,7 +5,7 @@ namespace QCreatureConfig
 {
     public class QCreature
     {
-        public float scale = 1f;
+        public float size = 1f;
         public float health = 1f;
         public float damage = 1f;
 
