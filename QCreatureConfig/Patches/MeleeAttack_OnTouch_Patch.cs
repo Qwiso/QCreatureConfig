@@ -11,5 +11,10 @@ namespace QCreatureConfig.Patches
         {
             QCreatures.lastTouched = __instance.gameObject.GetComponent<Creature>();
         }
+
+        public static void Postfix()
+        {
+            QCreatures.lastTouched = null;
+        }
     }
 }

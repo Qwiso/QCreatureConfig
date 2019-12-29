@@ -8,7 +8,12 @@ namespace QCreatureConfig.Patches
     {
         public static void Prefix(SeaDragonMeleeAttack __instance)
         {
-            QCreatures.lastTouched = __instance.gameObject.GetComponent<Creature>();
+            QCreatures.lastTouched = __instance.seaDragon;
+        }
+
+        public static void Postfix()
+        {
+            QCreatures.lastTouched = null;
         }
     }
 }

@@ -56,7 +56,6 @@
     <Compile Include="Patches\Crash_Detonate_Patch.cs" />
     <Compile Include="Patches\Creature_Start_Patch.cs" />
     <Compile Include="Patches\DamageSystem_CalculateDamage_Patch.cs" />
-    <Compile Include="Patches\Knife_OnToolUseAnim_Patch.cs" />
     <Compile Include="Patches\MeleeAttack_OnTouch_Patch.cs" />
     <Compile Include="Patches\ReaperLeviathan_DamageVehicle_Patch.cs" />
     <Compile Include="Patches\ReaperMeleeAttack_OnTouch_Patch.cs" />
